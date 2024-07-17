@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    font-family: "Space Grotesk", sans-serif;
+}
+
+@layer components {
+  .swiper-pagination {
+    @apply flex items-center justify-center space-x-1;
+  }
+
+  .swiper-pagination-bullet {
+    @apply w-8 h-8 bg-gray-700 opacity-100 rounded-full transition-all duration-300 ease-in-out relative;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply bg-blue-700 scale-125;
+  }
+
+  /* Custom line between dots using ::after pseudo-element */
+  .swiper-pagination-bullet::after {
+    content: '---';
+    @apply absolute bg-gray-500 h-5 w-4 left-full top-1/2 transform -translate-y-1/2 transition-all duration-300 ease-in-out;
+  }
+
+  /* Hide line for the last bullet */
+  .swiper-pagination-bullet:last-child::after {
+    @apply hidden;
+  }
+
+  .swiper-pagination-bullet-active::after {
+    @apply bg-blue-500;
+  }
+}
+
+
+ @layer components {
+  /* Hover zoom effect */
+  .hover-zoom {
+    @apply transition-transform duration-300 ease-in-out;
+  }
+
+  .hover-zoom:hover img {
+    @apply transform scale-105;
+  }
+
+  /* Ensuring equal height and width for cards */
+ 
+}
+@layer utilities {
+  .custom-dots li:not(:last-child)::after {
+    @apply content-[''] absolute right-0 top-1/2 -translate-y-1/2 w-2 h-px bg-gray-300;
+  }
+
+  .custom-dots li.slick-active .animate-dot-fill {
+    @apply bg-black origin-left;
+  }
+}
