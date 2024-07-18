@@ -14,7 +14,7 @@ const Navbar = () => {
   
   return (
     <>
-      <nav className="flex justify-between items-center  lg:mb-20  ">
+      <nav className="flex justify-between items-center  lg:mb-20   ">
         {/* Logo */}
         <div className="flex flex-shrink-0 items-center">
           <img src={logo1} alt="Logo" />

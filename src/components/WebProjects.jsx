@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import "../index.css"; // Ensure this import includes your custom Tailwind CSS
 import { Pagination } from "swiper/modules";
 import { webDevelopmentProjects } from "../constants";
-
+import { ArrowUpRight } from "lucide-react";
 const  WebProjects=()=> {
   return (
     <div className=" my-10">
@@ -52,9 +52,9 @@ const  WebProjects=()=> {
               <p className=" mt-5">
                 <a
                   href={item.link}
-                  className="text-blue font-semibold text-sm cursor-pointer  "
+                  className="text-blue font-semibold text-sm cursor-pointer flex justify-start items-center "
                 >
-                  View Project
+                  View Project <ArrowUpRight />
                 </a>
               </p>
             </div>

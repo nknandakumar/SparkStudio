@@ -2,7 +2,7 @@ import {services} from "../constants/index"
 
 const Service = () => {
   return (
-    <section className=" mb-6 lg:mb-20  ">
+    <section className=" mb-20  ">
       <h1 className=" text-5xl my-20 font-custom font-bold px-4 text-center ">
         Service
       </h1>
