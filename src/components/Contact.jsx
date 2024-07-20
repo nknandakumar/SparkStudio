@@ -1,14 +1,21 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init({
+  delay: 200,
+});
 
 const Contact = () => {
   return (
     <section id="contact" className="mb-10 lg:mb-20 ">
-      <h1 className=" text-5xl mt-10  font-sans text-center font-bold ">
+      <h1
+        data-aos="fade-up"
+        className=" text-5xl mt-10  font-sans text-center font-bold "
+      >
         Contact <span className=" font-sans font-semibold italic ">Us</span>{" "}
       </h1>
       {/* Form */}
       <div
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
+        data-aos="zoom-in-down"
         className=" bg-slate-100 rounded-3xl flex my-10 "
       >
         <form
@@ -64,6 +71,6 @@ const Contact = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Contact ;
+export default Contact;

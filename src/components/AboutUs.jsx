@@ -1,14 +1,23 @@
 import { aboutUs } from "../constants";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init({
+  delay: 200,
+});
 const AboutUs = () => {
   return (
     <section id="aboutus" className="mb-20 lg:mb-20 mt-8 px-4">
-      <h1 className="text-5xl my-20 font-sans font-bold text-center">
+      <h1
+        data-aos="fade-up"
+        className="text-5xl my-20 font-sans font-bold text-center"
+      >
         About Us/Team
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20  mx-auto">
         {aboutUs.map((about, index) => (
           <div
+            data-aos="zoom-in-down"
+            data-aos-delay={index * 100}
             key={index}
             className={`about-card flex flex-col p-6 justify-between items-center bg-slate-100 rounded-3xl shadow-md border border-b-4 border-black h-full ${about.order} `}
           >

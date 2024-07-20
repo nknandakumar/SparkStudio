@@ -5,6 +5,11 @@ import "../index.css"; // Ensure this import includes your custom Tailwind CSS
 import { Pagination } from "swiper/modules";
 import { videoEditingProjects } from "../constants";
 import { ArrowUpRight } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init({
+  delay: 300,
+});
 const Smm = () => {
   return (
     <div className=" my-10">
@@ -33,7 +38,11 @@ const Smm = () => {
       >
         {videoEditingProjects.map((item, i) => (
           <SwiperSlide key={i} className="cursor-pointer">
-            <div className="card p-5 bg-slate-100 rounded-3xl border border-b-4 mb-10 mx-4  cursor-grab ">
+            <div
+              data-aos="zoom-in"
+              data-aos-delay={i * 200}
+              className="card p-5 bg-slate-100 rounded-3xl border border-b-4 mb-10 mx-4  cursor-grab "
+            >
               <div className="">
                 <div className="relative overflow-hidden rounded-3xl h-[200px]">
                   <img

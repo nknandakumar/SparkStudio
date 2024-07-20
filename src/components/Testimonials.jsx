@@ -1,6 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
 import { testimonials } from "../constants";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init({
+  delay: 200,
+});
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -34,7 +39,10 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="mb-20 py-8 bg-slate-50 ">
-      <h1 className="text-5xl font-sans text-center font-semibold mb-20">
+      <h1
+        data-aos="fade-up"
+        className="text-5xl font-sans text-center font-semibold mb-20"
+      >
         Testimonials
       </h1>
       <div className="px-4">

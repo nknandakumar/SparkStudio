@@ -5,6 +5,12 @@ import "../index.css"; // Ensure this import includes your custom Tailwind CSS
 import { Pagination } from "swiper/modules";
 import { graphicDesignProjects } from "../constants";
 import {ArrowUpRight } from "lucide-react"
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init({
+  delay: 300,
+});
+
 const GraphicDesign = () => {
   return (
     <div className=" my-10">
@@ -34,7 +40,8 @@ const GraphicDesign = () => {
         {graphicDesignProjects.map((item, i) => (
           <SwiperSlide key={i} className="cursor-pointer">
             <div
-            
+              data-aos="zoom-out-up"
+              data-aos-delay={i * 200}
               className="card p-5 bg-slate-100 rounded-3xl border border-b-4 mb-10 mx-4  cursor-grab "
             >
               <div className="relative overflow-hidden rounded-3xl h-[200px]">

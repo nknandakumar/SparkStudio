@@ -3,7 +3,11 @@ import AllProjects from "./AllProjects";
 import WebProjects from "./WebProjects";
 import GraphicDesign from "./GraphicDesign";
 import Smm from "./Smm";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init({
+  delay: 300,
+});
 
 const Projects = () => {
     const [activeTabIndex, setActiveTabIndex] = useState(0);
@@ -15,12 +19,18 @@ const Projects = () => {
 
   
   return (
-    <section  id="portfolio" className="  mb-10 lg:mb-20 ">
-      <h1 className=" text-5xl my-10  font-bold text-center ">Portfolio</h1>
+    <section id="portfolio" className="  mb-10 lg:mb-20 ">
+      <h1
+        data-aos="fade-up"
+        className=" text-5xl my-10  font-bold text-center "
+      >
+        Portfolio
+      </h1>
 
       <div className="tabs  ">
         <ul className="flex justify-center items-center  font-semibold  ">
           <li
+            data-aos="fade-up"
             className={`py-2 px-4 cursor-pointer hover:text-blue-600  ${
               activeTabIndex === 0
                 ? "text-blue-600 border-b-2 border-blue-600 border-blue transition-all duration-400 "
@@ -31,6 +41,7 @@ const Projects = () => {
             All
           </li>
           <li
+            data-aos="fade-up"
             className={`py-2 px-4 cursor-pointer hover:text-blue-600 ${
               activeTabIndex === 1
                 ? "text-blue-600 border-b-2  border-blue transition-all duration-400 "
@@ -41,6 +52,7 @@ const Projects = () => {
             Web
           </li>
           <li
+            data-aos="fade-up"
             className={`py-2 px-4 cursor-pointer hover:text-blue-600 ${
               activeTabIndex === 2
                 ? "text-blue-600 border-b-2 border-blue border-blue-600 transition-all duration-400 "
@@ -51,6 +63,7 @@ const Projects = () => {
             graphicDesign
           </li>
           <li
+            data-aos="fade-up"
             className={`py-2 px-4 cursor-pointer hover:text-blue-600 ${
               activeTabIndex === 3
                 ? "text-blue-600 border-b-2 border-blue-600 border-blue transition-all duration-400 "

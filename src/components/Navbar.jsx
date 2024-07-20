@@ -62,8 +62,11 @@ const Navbar = () => {
             ))}
           </div>
           <div className="flex my-2 items-center justify-center lg:hidden">
-            <button className="font-custom py-2 px-4 rounded-xl border text-xl hover:bg-neutral-950 hover:text-white transition-all">
-              Contact
+            <button
+              onClick={toggleMenu}
+              className="font-custom py-2 px-4 rounded-xl border text-xl hover:bg-neutral-950 hover:text-white transition-all"
+            >
+              <a href="#contact"> Contact</a>
             </button>
           </div>
         </div>

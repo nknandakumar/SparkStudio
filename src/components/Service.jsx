@@ -2,14 +2,14 @@ import {services} from "../constants/index"
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init({
-  delay:100
+  delay:500
 });
 
 const Service = () => {
   return (
     <section className=" mb-20  ">
       <h1
-        data-aos="fade-right"
+        data-aos="fade-up"
         className=" text-5xl my-10 font-custom font-bold px-4 text-center "
       >
         Service

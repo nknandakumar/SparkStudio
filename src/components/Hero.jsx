@@ -14,7 +14,7 @@ const Hero = () => {
             <span className="font-bold bg-gradient-to-tr from-red-200 via-indigo-500 to-yellow-100 bg-clip-text text-transparent order-1 ">
               Spark
             </span>{" "}
-            <span className="bg-gradient-to-tr  from-slate-800 via-neutral-300 to-slate-800 bg-clip-text text-transparent  px-2 py-1 ">
+            <span className="bg-gradient-to-tr  from-slate-900 via-slate-300 to-slate-900 bg-clip-text text-transparent  px-2 py-1 ">
               Studio
             </span>
           </h1>
