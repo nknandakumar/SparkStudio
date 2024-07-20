@@ -34,11 +34,11 @@ const  WebProjects=()=> {
       >
         {webDevelopmentProjects.map((item, i) => (
           <SwiperSlide key={i} className="cursor-grab  ">
-            <div className="card p-5 bg-slate-100 rounded-3xl border border-b-4 mb-10 mx-4 h-[500px]  ">
+            <div className="card p-5 bg-slate-100 rounded-3xl border border-b-4 mb-10 mx-4  ">
               <div className="">
-                <div className="rounded-3xl hover-zoom">
+                <div className="relative overflow-hidden rounded-3xl h-[200px]">
                   <img
-                    className="rounded-3xl w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out card-hover"
                     src={item.image}
                     alt={item.title}
                   />

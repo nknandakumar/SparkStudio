@@ -1,12 +1,16 @@
 
 const Contact = () => {
   return (
-    <section className="mb-10 lg:mb-20 ">
+    <section id="contact" className="mb-10 lg:mb-20 ">
       <h1 className=" text-5xl mt-10  font-sans text-center font-bold ">
         Contact <span className=" font-sans font-semibold italic ">Us</span>{" "}
       </h1>
       {/* Form */}
-      <div className=" bg-slate-100 rounded-3xl flex my-10 ">
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        className=" bg-slate-100 rounded-3xl flex my-10 "
+      >
         <form
           action=""
           className=" bg-slate-100 p-5 rounded-3xl my-10 flex flex-col space-y-6 max-w-4xl px-8  w-full lg:1/2 lg:ml-10 "
@@ -21,6 +25,7 @@ const Contact = () => {
               placeholder="Name"
               id="name"
               type="text"
+              required
             />
           </div>
           <div className="space-y-2">
@@ -33,6 +38,7 @@ const Contact = () => {
               id="email"
               type="email"
               placeholder="E-mail"
+              required
             />
           </div>
           <div className="space-y-2">
@@ -45,11 +51,15 @@ const Contact = () => {
               id="message"
               rows="5"
               placeholder="Message"
+              required
             />
           </div>
+          <button className=" w-full py-4 font-semibold bg-black text-white hover:bg-slate-50 hover:text-black rounded-lg border transition-all duration-200">
+            Submit
+          </button>
         </form>
         <div className=" hidden lg:flex lg:1/2 justify-end w-full  ">
-          <img height={500} width={500} src="/assets/praposalSec.svg" alt="" />
+          <img height={500} width={500} src="/assets/contact.svg" alt="" />
         </div>
       </div>
     </section>

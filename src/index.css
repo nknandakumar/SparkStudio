@@ -28,7 +28,7 @@
   }
 
   .slick-dots li button {
-    @apply w-8 h-1 bg-gray-300 rounded-full transition-all duration-300 ease-in-out;
+    @apply w-8 h-8 bg-gray-300 rounded-full transition-all duration-300 ease-in-out;
   }
 
   .slick-dots li.slick-active button {
@@ -49,3 +49,13 @@
     @apply bg-black;
   }
 }
+
+
+ .card:hover .card-hover {
+            transform: scale(1.1);
+          }
+
+
+          html{
+            scroll-behavior: smooth;
+          }

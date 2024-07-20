@@ -2,7 +2,7 @@ import { aboutUs } from "../constants";
 
 const AboutUs = () => {
   return (
-    <section className="mb-20 lg:mb-20 mt-8 px-4">
+    <section id="aboutus" className="mb-20 lg:mb-20 mt-8 px-4">
       <h1 className="text-5xl my-20 font-sans font-bold text-center">
         About Us/Team
       </h1>
@@ -10,7 +10,7 @@ const AboutUs = () => {
         {aboutUs.map((about, index) => (
           <div
             key={index}
-            className="about-card flex flex-col p-6 justify-between items-center bg-slate-100 rounded-3xl shadow-md border border-b-4 border-black h-full"
+            className={`about-card flex flex-col p-6 justify-between items-center bg-slate-100 rounded-3xl shadow-md border border-b-4 border-black h-full ${about.order} `}
           >
             <div className="w-48 h-48 mb-4 overflow-hidden rounded-full">
               <img

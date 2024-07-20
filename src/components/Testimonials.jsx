@@ -6,32 +6,34 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Testimonials = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
         },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
         },
-      },
-    ],
-  };
+      ],
+    };
 
   return (
-    <section className="mb-20 py-8 bg-slate-50 ">
+    <section id="testimonials" className="mb-20 py-8 bg-slate-50 ">
       <h1 className="text-5xl font-sans text-center font-semibold mb-20">
         Testimonials
       </h1>
@@ -48,11 +50,11 @@ const Testimonials = () => {
                   />
                 </div>
                 <p className="text-base tracking-wide">{item.feedback}</p>
-                <h2 className="text-xl font-semibold font-sans mb-4">
+                <h2 className="text-xl font-semibold font-sans mb-4 underline cursor-pointer ">
                   {item.name}
                   <br />
-                  <span className="text-base font-thin">{item.title}</span>
                 </h2>
+                <span className="text-base font-thin  ">{item.title}</span>
               </div>
             </div>
           ))}

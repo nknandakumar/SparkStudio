@@ -11,6 +11,7 @@ export default {
       },
       fontFamily: {
         custom: ["Space Grotesk", "sans-serif"],
+          styly: ["Playwrite CU", "cursive"],
       },
       keyframes: {
         "dot-fill": {

@@ -15,7 +15,7 @@ const Projects = () => {
 
   
   return (
-    <section className="  mb-10 lg:mb-20 ">
+    <section  id="portfolio" className="  mb-10 lg:mb-20 ">
       <h1 className=" text-5xl my-10  font-bold text-center ">Portfolio</h1>
 
       <div className="tabs  ">

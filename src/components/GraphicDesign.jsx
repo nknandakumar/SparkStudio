@@ -33,15 +33,16 @@ const GraphicDesign = () => {
       >
         {graphicDesignProjects.map((item, i) => (
           <SwiperSlide key={i} className="cursor-pointer">
-            <div className="card p-5 bg-slate-100 rounded-3xl border border-b-4 mb-10 mx-4 h-[500px] ">
-              <div className="">
-                <div className="rounded-3xl hover-zoom">
-                  <img
-                    className="rounded-3xl w-full h-full object-cover"
-                    src={item.image}
-                    alt={item.title}
-                  />
-                </div>
+            <div
+            
+              className="card p-5 bg-slate-100 rounded-3xl border border-b-4 mb-10 mx-4  cursor-grab "
+            >
+              <div className="relative overflow-hidden rounded-3xl h-[200px]">
+                <img
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out card-hover"
+                  src={item.image}
+                  alt={item.title}
+                />
               </div>
               <h1 className="text-sm font-sans text-blue my-4">{item.Type}</h1>
               <h2 className="text-xl font-semibold font-sans mb-4">
@@ -53,7 +54,7 @@ const GraphicDesign = () => {
                   href={item.link}
                   className="text-blue font-semibold text-sm flex justify-start items-center cursor-pointer"
                 >
-                  View Project <ArrowUpRight  />
+                  View Project <ArrowUpRight />
                 </a>
               </p>
             </div>
@@ -65,3 +66,4 @@ const GraphicDesign = () => {
 };
 
 export default GraphicDesign;
+// hover:border-b-4 hover:border-cyan-700
