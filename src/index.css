@@ -55,7 +55,9 @@
             transform: scale(1.1);
           }
 
-
-          html{
-            scroll-behavior: smooth;
-          }
+.card:hover .card-hovertext{
+    color: rgb(27, 120, 234) ;
+    transition:all ;
+     opacity: 1;
+      text-decoration: underline ;
+}

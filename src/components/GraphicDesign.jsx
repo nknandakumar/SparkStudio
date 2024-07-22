@@ -59,7 +59,7 @@ const GraphicDesign = () => {
               <p className="mt-5">
                 <a
                   href={item.link}
-                  className="text-blue font-semibold text-sm flex justify-start items-center cursor-pointer"
+                  className="text-blue font-semibold text-sm flex justify-start items-center cursor-pointer card-hovertext "
                 >
                   View Project <ArrowUpRight />
                 </a>

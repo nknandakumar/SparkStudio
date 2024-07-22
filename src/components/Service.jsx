@@ -2,7 +2,7 @@ import {services} from "../constants/index"
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init({
-  delay:500
+  delay:300
 });
 
 const Service = () => {
@@ -18,10 +18,10 @@ const Service = () => {
         {services.map((service, index) => (
           <div
             data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom"
+          
             id="services"
             key={index}
-            data-aos-delay={index * 200}
+            data-aos-delay={index * 100}
             className="service-card flex flex-col p-5 justify-center items-center bg-slate-100 gap-4 rounded-3xl mx-2 my-4 shadow-md border border-b-4  border-black  " //
           >
             <img className="" src={service.image} alt={service.title} />

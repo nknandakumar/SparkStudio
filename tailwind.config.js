@@ -4,6 +4,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      body: {
+        "scroll-behavior": "smooth",
+      },
       colors: {
         blue: "#0055d4",
         gray: "#f3f3f3",
@@ -11,7 +14,7 @@ export default {
       },
       fontFamily: {
         custom: ["Space Grotesk", "sans-serif"],
-          styly: ["Playwrite CU", "cursive"],
+        styly: ["Playwrite CU", "cursive"],
       },
       keyframes: {
         "dot-fill": {

@@ -1,88 +1,76 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import AllProjects from "./AllProjects";
 import WebProjects from "./WebProjects";
 import GraphicDesign from "./GraphicDesign";
 import Smm from "./Smm";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 AOS.init({
   delay: 300,
 });
 
 const Projects = () => {
-    const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const [underlineProps, setUnderlineProps] = useState({ left: 0, width: 0 });
+  const tabRefs = useRef([]);
 
-    const handleTabClick = (index) => {
-      setActiveTabIndex(index);
-    };
+  useEffect(() => {
+    const activeTab = tabRefs.current[activeTabIndex];
+    if (activeTab) {
+      setUnderlineProps({
+        left: activeTab.offsetLeft,
+        width: activeTab.offsetWidth,
+      });
+    }
+  }, [activeTabIndex]);
 
+  const handleTabClick = (index) => {
+    setActiveTabIndex(index);
+  };
 
-  
+  const tabItems = ["All", "Web", "Graphic Design", "SMM"];
+  const tabComponents = [AllProjects, WebProjects, GraphicDesign, Smm];
+
   return (
-    <section id="portfolio" className="  mb-10 lg:mb-20 ">
-      <h1
-        data-aos="fade-up"
-        className=" text-5xl my-10  font-bold text-center "
-      >
+    <section id="portfolio" className="mb-10 lg:mb-20">
+      <h1 data-aos="fade-up" className="text-5xl my-10 font-bold text-center">
         Portfolio
       </h1>
 
-      <div className="tabs  ">
-        <ul className="flex justify-center items-center  font-semibold  ">
-          <li
-            data-aos="fade-up"
-            className={`py-2 px-4 cursor-pointer hover:text-blue-600  ${
-              activeTabIndex === 0
-                ? "text-blue-600 border-b-2 border-blue-600 border-blue transition-all duration-400 "
-                : ""
-            }`}
-            onClick={() => handleTabClick(0)}
-          >
-            All
-          </li>
-          <li
-            data-aos="fade-up"
-            className={`py-2 px-4 cursor-pointer hover:text-blue-600 ${
-              activeTabIndex === 1
-                ? "text-blue-600 border-b-2  border-blue transition-all duration-400 "
-                : ""
-            }`}
-            onClick={() => handleTabClick(1)}
-          >
-            Web
-          </li>
-          <li
-            data-aos="fade-up"
-            className={`py-2 px-4 cursor-pointer hover:text-blue-600 ${
-              activeTabIndex === 2
-                ? "text-blue-600 border-b-2 border-blue border-blue-600 transition-all duration-400 "
-                : ""
-            }`}
-            onClick={() => handleTabClick(2)}
-          >
-            graphicDesign
-          </li>
-          <li
-            data-aos="fade-up"
-            className={`py-2 px-4 cursor-pointer hover:text-blue-600 ${
-              activeTabIndex === 3
-                ? "text-blue-600 border-b-2 border-blue-600 border-blue transition-all duration-400 "
-                : ""
-            }`}
-            onClick={() => handleTabClick(3)}
-          >
-            SMM
-          </li>
+      <div className="tabs relative">
+        <ul className="flex justify-center items-center font-semibold relative">
+          {tabItems.map((tab, index) => (
+            <li
+              key={index}
+              data-aos="fade-up"
+              className={`py-2 px-4 cursor-pointer hover:text-blue-600 ${
+                activeTabIndex === index ? "text-blue-600" : ""
+              }`}
+              onClick={() => handleTabClick(index)}
+              ref={(el) => (tabRefs.current[index] = el)}
+            >
+              {tab}
+            </li>
+          ))}
         </ul>
-        <div className="content py-4">
-          {activeTabIndex === 0 && <AllProjects />}
-          {activeTabIndex === 1 && <WebProjects />}
-          {activeTabIndex === 2 && <GraphicDesign />}
-          {activeTabIndex === 3 && <Smm />}
-        </div>
+        <motion.div
+          layoutId="underline"
+          className="absolute bottom-0 bg-blue-600 h-1"
+          style={{ left: underlineProps.left, width: underlineProps.width }}
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        />
+      </div>
+
+      <div className="content py-4">
+        {tabComponents.map(
+          (Component, index) =>
+            activeTabIndex === index && <Component key={index} />
+        )}
       </div>
     </section>
   );
-}
+};
 
-export default Projects
+export default Projects;

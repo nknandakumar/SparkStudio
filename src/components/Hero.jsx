@@ -2,7 +2,7 @@ import HeroImg from "/assets/Hero.svg";
 import Socails from "./Socails";
 const Hero = () => {
   return (
-    <section id="home" className="mt-28 lg:mt-26 my-4 mb-10">
+    <section id="home" className="mt-28 lg:mt-26 my-4 mb-10  ">
       <div className="flex flex-col lg:flex-row xl:flex-row items-center justify-center">
         <div className="lg:hidden flex flex-col justify-center items-center ">
           <p className=" uppercase font-bold text-indigo-500 text-xl md:text-2xl ">
@@ -24,7 +24,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="w-full lg:w-1/2 xl:w-1/2 px-4 space-y-4 md:space-y-8 order-3 lg:order-none">
+        <div className="w-full lg:w-1/2 xl:w-1/2 px-4 space-y-4 md:space-y-6 order-3 lg:order-none">
           <div className="space-y-2 hidden lg:flex lg:flex-col ">
             <p className="  text-start uppercase font-bold text-blue text-xl  ">
               {" "}
