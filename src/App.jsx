@@ -12,9 +12,7 @@ const App = () => {
        
   return (
     <>
-   
-      
-      <div className=" container mx-auto px-4  lg:px-10 bg-[#ffffff] ">
+      <div className=" container mx-auto px-4  lg:px-10 bg-[ #FEECEB] ">
         <Navbar />
         <Hero />
         <Service />
