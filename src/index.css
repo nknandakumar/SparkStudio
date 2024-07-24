@@ -76,3 +76,21 @@
      opacity: 1;
       text-decoration: underline ;
 }
+
+
+.group {
+  position: relative;
+}
+
+.group span.absolute {
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  transition: all 0.3s;
+  height: 0.5px;
+  background-color: #6366f1; /* Change this color as needed */
+}
+
+.group:hover span.absolute {
+  width: 100%;
+}

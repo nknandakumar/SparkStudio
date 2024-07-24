@@ -9,7 +9,7 @@ import { ArrowUpRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init({
-  delay: 400,
+  delay: 300,
 });
 const  WebProjects=()=> {
   return (
@@ -42,7 +42,7 @@ const  WebProjects=()=> {
             <div
               data-aos="zoom-in"
               data-aos-anchor-placement="top-bottom"
-              data-aos-delay={i * 300}
+              data-aos-delay={i * 200}
               className="card p-5 bg-slate-100 rounded-3xl border border-b-4 mb-10 mx-4  "
             >
               <div className="">
@@ -62,7 +62,7 @@ const  WebProjects=()=> {
               <p className=" mt-5">
                 <a
                   href={item.link}
-                  className="text-blue font-semibold text-sm cursor-pointer flex justify-start items-center card-hovertext "
+                  className="text-blue font-semibold text-sm cursor-pointer flex justify-start items-center card-hovertext   "
                 >
                   View Project <ArrowUpRight />
                 </a>
