@@ -17,7 +17,7 @@ const App = () => {
     // Simulate loading data and images
     const loadResources = async () => {
       // Replace this with your actual data and image loading logic
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 2500));
       setIsLoading(false);
     };
 
