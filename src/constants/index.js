@@ -231,34 +231,7 @@ export const aboutUs = [
       }, // Replace with actual GitHub URL and logo URL
     ],
   },
-  {
-    image: AboutImg,
-    name: "Tharun S",
-    skills: "Web Developer, Content Writer",
-    order: " order-none lg:order-3 ",
-    socials: [
-      {
-        platform: "Instagram",
-        url: "https://www.instagram.com/tio",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png",
-      }, // Replace with actual Instagram URL and logo URL
-      {
-        platform: "LinkedIn",
-        url: "https://www.linkedin.com/in/tio",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg",
-      }, // Replace with actual LinkedIn URL and logo URL
-      {
-        platform: "X",
-        url: "https://www.x.com/tio",
-        logo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAA/0lEQVR4AbXPIazCMACE4d+L2qoZFEGSIGcRc/gJJB5XMzGJmK9EN0HMi+qaibkKVF1txdQe4g0YzPK5yyWXHL9TaPNQ89LojH87N1rbJcXkMF4Fk31UMrf34hm14KUeoQxGArALHTMuQD2cAWQfJXOpgTbksGr9ng8qluShJTPhyCdx63POg7rEim95ZyR68I1ggQpnCEGwyPicw6hZtPEGmnhkycqOio1zm6XuFtyw5XDXfGvuau0dXHzJp8pfBPuhIXO9ZK5ILUCdSvLYMpc6ASBtl3EaC97I4KaFaOCaBE9Zn5jUsVqR2vcTJZO1DdbGoZryVp94Ka/mQfE7f2T3df0WBhLDAAAAAElFTkSuQmCC",
-      }, // Replace with actual X (formerly Twitter) URL and logo URL
-      {
-        platform: "GitHub",
-        url: "https://www.github.com/tio",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
-      },
-    ],
-  },
+
   {
     image: AboutImg,
     name: "Darshan P",
@@ -287,4 +260,33 @@ export const aboutUs = [
       },
     ],
   },
+  {
+    image: AboutImg,
+    name: "Tharun S",
+    skills: "Web Developer, Content Writer",
+    order: " order-none lg:order-3 ",
+    socials: [
+      {
+        platform: "Instagram",
+        url: "https://www.instagram.com/tio",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png",
+      }, // Replace with actual Instagram URL and logo URL
+      {
+        platform: "LinkedIn",
+        url: "https://www.linkedin.com/in/tio",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg",
+      }, // Replace with actual LinkedIn URL and logo URL
+      {
+        platform: "X",
+        url: "https://www.x.com/tio",
+        logo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAA/0lEQVR4AbXPIazCMACE4d+L2qoZFEGSIGcRc/gJJB5XMzGJmK9EN0HMi+qaibkKVF1txdQe4g0YzPK5yyWXHL9TaPNQ89LojH87N1rbJcXkMF4Fk31UMrf34hm14KUeoQxGArALHTMuQD2cAWQfJXOpgTbksGr9ng8qluShJTPhyCdx63POg7rEim95ZyR68I1ggQpnCEGwyPicw6hZtPEGmnhkycqOio1zm6XuFtyw5XDXfGvuau0dXHzJp8pfBPuhIXO9ZK5ILUCdSvLYMpc6ASBtl3EaC97I4KaFaOCaBE9Zn5jUsVqR2vcTJZO1DdbGoZryVp94Ka/mQfE7f2T3df0WBhLDAAAAAElFTkSuQmCC",
+      }, // Replace with actual X (formerly Twitter) URL and logo URL
+      {
+        platform: "GitHub",
+        url: "https://www.github.com/tio",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+      },
+    ],
+  },
+ 
 ];
